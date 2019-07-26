@@ -23,11 +23,7 @@ class KademoServiceProvider extends ServiceProvider
 
     public function boot(Twig $twig, Dispatcher $dispatcher)
     {
-        $dispatcher->listen('IO.tpl.item', function (TemplateContainer $container)
-        {
-            $container->setTemplate('Kademo::Item.SingleItemWrapper');
-            return false;
-        }, self::PRIORITY);
+
     }
 }
 
